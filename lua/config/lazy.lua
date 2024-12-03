@@ -25,5 +25,12 @@ require('lazy').setup({
     rocks = {
         enabled = false,
     },
+    --[[performance = {
+        rtp = {
+            paths = {
+                '/usr/share/nvim/runtime/',
+            },
+        },
+    },]]
 })
 
