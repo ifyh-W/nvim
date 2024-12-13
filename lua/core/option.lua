@@ -38,4 +38,6 @@ o.undofile = true
 o.undodir = vim.fn.expand('$HOME/.local/share/nvim/undo')
 -- 可能对编辑md文档有帮助
 o.conceallevel = 0
+-- 输入搜索时就开始高亮
+o.incsearch = true
 

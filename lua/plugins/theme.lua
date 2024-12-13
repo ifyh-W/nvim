@@ -1,14 +1,19 @@
-return {
-    'shaunsingh/nord.nvim',
-    init = function()
-        local g = vim.g
-
-        g.nord_italic = false
-        g.nord_bold = false
-    end,
-    config = function()
-
-        require('nord').set()
-        vim.cmd.colorscheme('nord')
-    end,
+local nord_opts = {
+    borders = false,
+    search = {
+        theme = 'vscode',
+    },
 }
+
+return {
+    {
+        "gbprod/nord.nvim",
+        lazy = false,
+        priority = 1000,
+        config = function()
+          require("nord").setup(nord_opts)
+          vim.cmd.colorscheme("nord")
+        end,
+    }
+}
+
