@@ -33,8 +33,8 @@ km.set('n', '<S-l>','<CMD>bnext<CR>', { desc = '切换buffer' })
 km.set('n', '<S-h>','<CMD>bNext<CR>', { desc = '切换buffer' })
 km.set('n', '<leader>x', '<CMD>bdelete<CR>', { desc = '关闭buffer' })
 
-km.set('n', '<leader><Tab>','gt', { desc = '切换tab' })
-km.set('n', '<leader><S-Tab>','gT', { desc = '切换tab' })
+km.set('n', '<A-Left>','gT', { desc = '切换tab' })
+km.set('n', '<A-Right>','gt', { desc = '切换tab' })
 
 km.set('n', '<leader>nh', '<CMD>nohl<CR>')
 
@@ -79,9 +79,14 @@ km.set('v', 'K', ":m '<-2<CR>gv=gv")
 km.set('v', '<', '<gv')
 km.set('v', '>', '>gv')
 
+-- 插入模式
+km.set('i', '<C-v>', '<C-o>"+p');
+
 -- 命令模式
 km.set('c', 'jk', '<Esc>')
 
 -- 终端模式
-km.set('t', 'ii', "<C-\\><C-n>")
+km.set('t', 'ii', '<C-\\><C-n>')
+km.set('t', '<A-Left>','<C-\\><C-n>gT', { desc = '切换tab' })
+km.set('t', '<A-Right>','<C-\\><C-n>gt', { desc = '切换tab' })
 
