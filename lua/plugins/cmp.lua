@@ -16,7 +16,7 @@ return {
                 ['<C-b>'] = cmp.mapping.scroll_docs(-4),
                 ['<C-f>'] = cmp.mapping.scroll_docs(4),
                 ['<C-e>'] = cmp.mapping.abort(),
-                ["<CR>"] = cmp.mapping(function(fallback)
+                ['<Tab>'] = cmp.mapping(function(fallback)
                     -- This little snippet will confirm with tab, and if no entry is selected, will confirm the first item
                     if cmp.visible() then
                         local entry = cmp.get_selected_entry()
