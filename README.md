@@ -37,7 +37,7 @@
 - \<leader\>sv \<leader\>sx 竖直/水平新建窗口
 - \<C-h\>\<C-j\>\<C-k\>\<C-l\> 切换窗口
 - \<C-Left\>\<C-Up\>\<C-Down\>\<C-Right\> 更改窗口大小
-- \<leader\>e 打开目录树（使用neovim自带的目录树netrw，缺点是关了再打开不会记住上次的状态。目前凑合用，不够用就换nvim-tree)
+- \<leader\>e 打开目录树
 - \<S-j\>\<S-k\> 视觉模式下移动行
 
 ### plugin keymap

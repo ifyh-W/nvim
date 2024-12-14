@@ -68,7 +68,8 @@ km.set('n', '<C-Right>', '<CMD>vertical resize +2<CR>')
 vim.g.netrw_liststyle = 3
 -- 关闭banner
 vim.g.netrw_banner = 0
-km.set('n', '<leader>e', '<CMD>Lex 25<CR>')
+-- 不再使用netrw，因为每次打开rw都会产生一个无名buffer，实在太烦了
+-- km.set('n', '<leader>e', '<CMD>Lex 25<CR>')
 
 -- 视觉模式
 km.set('v', 'ii', '<Esc>')
