@@ -40,4 +40,6 @@ o.undodir = vim.fn.expand('$HOME/.local/share/nvim/undo')
 o.conceallevel = 0
 -- 输入搜索时就开始高亮
 o.incsearch = true
+-- 不再显示左下角的insert
+o.showmode = false
 
