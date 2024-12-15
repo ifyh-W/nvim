@@ -31,7 +31,12 @@ km.set('n', ';', ':')
 
 km.set('n', '<S-l>','<CMD>bnext<CR>', { desc = '切换buffer' })
 km.set('n', '<S-h>','<CMD>bNext<CR>', { desc = '切换buffer' })
-km.set('n', '<leader>x', '<CMD>bdelete<CR>', { desc = '关闭buffer' })
+-- 切换到上一个buffer再关闭，防止导致tab自动关闭
+km.set('n', '<leader>x', function()
+    bufnr = vim.api.nvim_get_current_buf()
+    vim.cmd('b#')
+    vim.cmd('bd ' .. bufnr)
+end, { desc = '关闭buffer' })
 
 km.set('n', '<A-Left>','gT', { desc = '切换tab' })
 km.set('n', '<A-Right>','gt', { desc = '切换tab' })

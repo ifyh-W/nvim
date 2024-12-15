@@ -26,6 +26,9 @@
   - 并且在终端模式下可以直接使用alt加左右箭头切换回编写代码的tab
 - 两个tab，一个写代码一个终端执行命令
 
+- 注意：为了不在关闭buffer时导致tab也关闭，所以<leader>x关闭buffer的逻辑是，先运行b#(回到最近的buffer)，再关闭要关闭的buffer。
+而这在关闭最后一个buffer时可能会导致意料外的结果。
+
 ### keymap
 
 - n、c模式下jk退出，v、t模式下ii退出
@@ -37,11 +40,11 @@
 - \<leader\>sv \<leader\>sx 竖直/水平新建窗口
 - \<C-h\>\<C-j\>\<C-k\>\<C-l\> 切换窗口
 - \<C-Left\>\<C-Up\>\<C-Down\>\<C-Right\> 更改窗口大小
-- \<leader\>e 打开目录树
 - \<S-j\>\<S-k\> 视觉模式下移动行
 
 ### plugin keymap
 
+- \<leader\>e 打开目录树
 - \<leader\>lf 格式化文件 gd 去定义 K 悬浮文档 \<leader\>lr 重命名
 - \<tab\> 自动补全
 - \<C-b\>\<C-f\> 翻阅补全doc \<C-e\> 放弃补全
