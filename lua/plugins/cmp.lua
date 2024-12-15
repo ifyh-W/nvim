@@ -1,5 +1,6 @@
 return {
     'hrsh7th/nvim-cmp',
+    event = { "InsertEnter", "CmdlineEnter" },
     dependencies = {
         'hrsh7th/cmp-path',
         'hrsh7th/cmp-nvim-lsp',
@@ -14,7 +15,7 @@ return {
                 { name = 'nvim_lsp' },
                 { name = 'path' },
                 { name = 'cmdline' },
-                { name = 'buffer'}
+                { name = 'buffer' }
             }),
             mapping = cmp.mapping.preset.insert({
                 ['<C-b>'] = cmp.mapping.scroll_docs(-4),
@@ -34,7 +35,7 @@ return {
                 end, { "i", "s", "c", }),
             })
         })
-        cmp.setup.cmdline('/', {
+        cmp.setup.cmdline({ '/', '?' }, {
             mapping = cmp.mapping.preset.cmdline(),
             sources = {
                 { name = 'buffer' }
@@ -43,16 +44,15 @@ return {
         cmp.setup.cmdline(':', {
             mapping = cmp.mapping.preset.cmdline(),
             sources = cmp.config.sources({
-                    { name = 'path' }
-                },
+                { name = 'path' }
+            }, {
                 {
-                    {
-                        name = 'cmdline',
-                        option = {
-                            ignore_cmds = { 'Man', '!' }
-                        }
+                    name = 'cmdline',
+                    option = {
+                        ignore_cmds = { 'Man', '!' }
                     }
-                })
+                }
+            })
         })
     end,
 }
