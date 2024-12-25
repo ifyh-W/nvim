@@ -28,7 +28,7 @@ o.splitbelow = true
 -- 指令序列的等待时间
 o.timeoutlen = 300
 -- 补全配置
-o.completeopt = { 'menuone' } 
+o.completeopt = { 'menuone' }
 -- 强制退出可能产生swap file
 o.swapfile = false
 -- 刷新磁盘(跟补全插件的延迟可能有关)

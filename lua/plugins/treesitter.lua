@@ -11,10 +11,11 @@ local opts = {
 }
 
 return {
-    'nvim-treesitter/nvim-treesitter',
-    config = function()
-        require('nvim-treesitter.configs').setup(opts)
-    end,
-    build = ':TSUpdate',
+    {
+        'nvim-treesitter/nvim-treesitter',
+        config = function()
+            require('nvim-treesitter.configs').setup(opts)
+        end,
+        build = ':TSUpdate',
+    },
 }
-
